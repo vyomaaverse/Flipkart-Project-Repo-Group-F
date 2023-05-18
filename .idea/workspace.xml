@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74832edf-626d-474f-b01a-a848854b355d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/StudentManagementClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/StudentManagementClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/AdminOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/AdminOperationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/ProfessorOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/ProfessorOperationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/StudentOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/StudentOperationService.java" afterDir="false" />
+    <list default="true" id="74832edf-626d-474f-b01a-a848854b355d" name="Changes" comment="added ProffessorOperationService">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +44,14 @@
       <option name="presentableId" value="Default" />
       <updated>1684401993010</updated>
     </task>
+    <task id="LOCAL-00001" summary="added ProffessorOperationService">
+      <created>1684431660952</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684431660952</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -59,6 +64,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added ProffessorOperationService" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ProffessorOperationService" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
