@@ -3,19 +3,26 @@ package com.flipkart.services;
 import com.flipkart.bean.Student;
 
 public class StudentOperationService extends Student {
-    public boolean changePassword(String newPassword) {
-        System.out.println("Impl Change Password of Student");
+	
+	public boolean addCourse(int semester, String courseCode) {
+		System.out.println("Registering student for semester " + semester + " of course " + courseCode);
 
-        return true;
-    }
+		return true;
+	}
+	
+	public boolean dropCourse(int semester, String courseCode) {
+		System.out.println("Dropping student for course " + courseCode + " of semester " + semester);
+		
+		return true;
+	}
 
-    public boolean register(int semester, String courseCode) {
-        System.out.println("Impl register of Student for semester " + semester + " of course " + courseCode);
+	public void viewGradeCard(int semester) {
+		System.out.println("Viewing GradeCard of student " + this.getStudentId() + " of semester " + semester);
+	}
 
-        return true;
-    }
+	public boolean updateDetails() {
+		System.out.println("Updating Details of student");
 
-    public void viewGradeCard(int semester) {
-        System.out.println("View GradeCard of Student " + this.getStudentId() + " of semester " + semester);
-    }
+		return true;
+	}
 }

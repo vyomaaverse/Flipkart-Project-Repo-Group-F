@@ -28,6 +28,7 @@ public class CRSAdminMenu {
             }
             else if(option == 2)
             {
+
                 System.out.println(admin.addProfessor());
             }
             else if(option == 3)

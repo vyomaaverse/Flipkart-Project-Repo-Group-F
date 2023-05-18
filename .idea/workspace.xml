@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74832edf-626d-474f-b01a-a848854b355d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/CRSAdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/CRSAdminMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/AdminOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/AdminOperationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/ProfessorOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/ProfessorOperationService.java" afterDir="false" />
-    </list>
+    <list default="true" id="74832edf-626d-474f-b01a-a848854b355d" name="Changes" comment="application client" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +22,7 @@
   </component>
   <component name="ProjectId" id="2Pxc5sSRTNTunwy3flmJSLkHdoz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -49,14 +44,21 @@
       <option name="presentableId" value="Default" />
       <updated>1684401993010</updated>
     </task>
-    <task id="LOCAL-00001" summary="added ProffessorOperationService">
-      <created>1684431660952</created>
+    <task id="LOCAL-00001" summary="Authentication Operation Service">
+      <created>1684431900171</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1684431660952</updated>
+      <updated>1684431900171</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="application client">
+      <created>1684434596476</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684434596476</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -71,8 +73,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added ProffessorOperationService" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ProffessorOperationService" />
+    <MESSAGE value="Authentication Operation Service" />
+    <MESSAGE value="application client" />
+    <option name="LAST_COMMIT_MESSAGE" value="application client" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
