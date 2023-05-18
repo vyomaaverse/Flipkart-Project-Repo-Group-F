@@ -9,6 +9,7 @@ public class SemesterRegistration {
     private int semester;
     private Date dateOfRegistration;
 
+
     private List<RegisteredCourse> registeredCourseList;
 
     public int getStudentId() {
