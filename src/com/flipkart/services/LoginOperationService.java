@@ -7,7 +7,7 @@ public class LoginOperationService extends User {
     public User login(String role, String username, String password){
         System.out.println("Verify user credentials");
 
-        return null;
+        return new User();
     }
 
     public boolean changePassword(String role, String userId, String oldPass, String newPass){
