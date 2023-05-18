@@ -2,7 +2,7 @@ package com.flipkart.bean;
 
 import java.util.Date;
 
-public class Professor {
+public class Professor extends User{
     private String department;
     private String designation;
     private Date doj;
