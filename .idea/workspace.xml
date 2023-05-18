@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="74832edf-626d-474f-b01a-a848854b355d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/StudentManagementClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/StudentManagementClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/AdminOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/AdminOperationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/ProfessorOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/ProfessorOperationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/StudentOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/StudentOperationService.java" afterDir="false" />
+    <list default="true" id="74832edf-626d-474f-b01a-a848854b355d" name="Changes" comment="Added to PaymentOperationService">
+      <change afterPath="$PROJECT_DIR$/src/com/flipkart/client/CRSAdminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +24,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2Pxc5sSRTNTunwy3flmJSLkHdoz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,6 +59,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added to PaymentOperationService" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to PaymentOperationService" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
