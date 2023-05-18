@@ -1,10 +1,14 @@
 package com.flipkart.bean;
 
+import java.util.List;
+
 public class Course {
     private String courseCode;
     private String name;
     private boolean isOffered;
     private String instructor;
+
+    private List<SemesterRegistration> semesterRegistrationList;
 
     public String getCourseCode() {
         return courseCode;

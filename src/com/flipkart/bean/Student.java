@@ -9,6 +9,8 @@ public class Student extends User{
 
     private List<SemesterRegistration> semesterRegistrations;
 
+    private List<GradeCard> gradeCardList;
+
 
 
     public int getStudentId() {

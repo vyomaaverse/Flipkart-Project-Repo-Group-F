@@ -9,8 +9,7 @@ public class CourseBusiness extends Course{
 
     public boolean deleteCourse(String code) {
         System.out.println("implement delete course");
+
         return true;
     }
-
-
 }

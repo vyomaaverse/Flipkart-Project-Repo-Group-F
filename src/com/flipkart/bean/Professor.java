@@ -1,11 +1,14 @@
 package com.flipkart.bean;
 
 import java.util.Date;
+import java.util.List;
 
 public class Professor extends User{
     private String department;
     private String designation;
     private Date doj;
+
+    List<Course> courseList;
 
     public String getDepartment() {
         return department;

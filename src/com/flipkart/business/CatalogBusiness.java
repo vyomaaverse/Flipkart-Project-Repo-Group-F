@@ -9,6 +9,7 @@ public class CatalogBusiness {
     public boolean deleteCourse(String code){
 
         System.out.println("Delete course with code " + code);
+        
         return true;
     }
 
