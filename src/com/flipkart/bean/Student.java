@@ -5,6 +5,8 @@ public class Student extends User{
     private String branch;
     private int batch;
 
+
+
     public int getStudentId() {
         return studentId;
     }
@@ -29,14 +31,6 @@ public class Student extends User{
         this.batch = batch;
     }
 
-    public boolean register(){
-        return true;
-    }
-    public boolean changePassword(){
-        return true;
-    }
-    public void viewGradeCard(){
-        System.out.println("report card goes here: ");
-    }
+
 
 }
