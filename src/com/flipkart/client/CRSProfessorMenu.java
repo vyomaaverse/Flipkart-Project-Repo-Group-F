@@ -24,10 +24,10 @@ public class CRSProfessorMenu {
         while (operation != 0){
             switch (operation){
                 case 1:
-                    professorService.viewEnrolledStudents();
+                    professorService.viewEnrolledStudents("courseCode");
                     break;
                 case 2:
-                    professorService.addGrade();
+                    professorService.addGrade(1, "courseCode", 1);
                     break;
                 case 3:
                     professorService.updateDetails();
