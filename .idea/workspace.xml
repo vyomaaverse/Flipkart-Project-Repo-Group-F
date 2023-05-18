@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74832edf-626d-474f-b01a-a848854b355d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/StudentManagementClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/StudentManagementClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/AdminOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/AdminOperationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/ProfessorOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/ProfessorOperationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/StudentOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/StudentOperationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

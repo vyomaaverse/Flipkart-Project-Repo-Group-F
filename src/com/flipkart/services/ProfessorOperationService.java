@@ -1,17 +1,8 @@
 package com.flipkart.services;
 
-public class ProfessorOperationService {
+import com.flipkart.bean.Professor;
 
-    public void addGrades(){
-
-        System.out.println("add grades for students");
-    }
-
-    public void viewEnrolledStudents(){
-
-        System.out.println("Enrolled studnets are viewed");
-    }
-
+public class ProfessorOperationService extends Professor{
     public void createProfessor(){
         System.out.println("create professor here");
     }
@@ -22,7 +13,13 @@ public class ProfessorOperationService {
         return true;
     }
 
+    public void addGrades(){
+        System.out.println("add grades for students");
+    }
 
+    public void viewEnrolledStudents(){
+        System.out.println("Display enrolled students here");
+    }
 
     public boolean updateDetails() {
         System.out.println("Impl of updateDetails of UserBusiness");
@@ -35,5 +32,4 @@ public class ProfessorOperationService {
 
         return true;
     }
-
 }
