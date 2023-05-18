@@ -11,6 +11,4 @@ public class CourseBusiness extends Course{
         System.out.println("implement delete course");
         return true;
     }
-
-
 }
