@@ -1,42 +1,47 @@
 package com.flipkart.client;
 
+import com.flipkart.bean.Professor;
 import com.flipkart.services.ProfessorOperationService;
 
 import java.util.Scanner;
 
 public class CRSProfessorMenu {
-    static void showCRSProfessorMenu() {
+	private static Scanner sc = new Scanner(System.in);
+	private static ProfessorOperationService professorService = new ProfessorOperationService();
 
-        ProfessorOperationService pos = new ProfessorOperationService();
+	private static void displayMenu() {
+		System.out.println("Select operation:");
+		System.out.println(" 0. Logout");
+		System.out.println(" 1. View enrolled students in a course");
+		System.out.println(" 2. Add grades of a course");
+		System.out.println(" 3. Update Details");
+	}
+
+	public static void professorMenu(Professor professor){
+        System.out.println("Hello " + professor.getName() + "!");
+        displayMenu();
+        int operation = sc.nextInt();
+        while (operation != 0){
+            switch (operation){
+                case 1:
+                    professorService.viewEnrolledStudents();
+                    break;
+                case 2:
+                    professorService.addGrade();
+                    break;
+                case 3:
+                    professorService.updateDetails();
+                    break;
+                default:
+                    System.out.println("Invalid operation");
+            }
 
 
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("\n==========================================================================\n");
-        System.out.println("Professor Menu");
-        System.out.println(" 1. View Enrolled Students");
-        System.out.println(" 2. Add Grades");
-        System.out.println(" 3. Update Details");
-        System.out.println("\n==========================================================================\n");
-
-
-        System.out.println("Enter Option : ");
-
-        int optionChosen = scanner.nextInt();
-        scanner.nextLine();
-
-        switch (optionChosen) {
-            case 1:
-                pos.viewEnrolledStudents();
-                break;
-
-            case 2:
-                pos.addGrade();
-                break;
-
-            case 3:
-                pos.updateDetails();
-                break;
+            displayMenu();
+            operation = sc.nextInt();
         }
+
+        System.out.println("Bye " + professor.getName());
+//        professorService.delete
     }
 }
