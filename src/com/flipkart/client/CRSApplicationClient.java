@@ -6,53 +6,59 @@ import com.flipkart.services.StudentOperationService;
 import java.util.Scanner;
 
 public class CRSApplicationClient {
-    private static Scanner sc = new Scanner(System.in);
-    private static LoginOperationService loginService = new LoginOperationService();
+	private static Scanner sc = new Scanner(System.in);
 
-    private static void displayMainMenu(){
-        System.out.println("Select Operation: ");
-        System.out.println(" 0: Close Application");
-        System.out.println(" 1: Login");
-        System.out.println(" 2: Register as a Student");
-    }
-    private static void handleLogin(){
-//        Get login details about the person
-        System.out.println("Roles:\n A: Admin\n P: Professor \n S: Student\nEnter Role Code:");
-        String role = sc.nextLine();
+	private static LoginOperationService loginService = new LoginOperationService();
 
-        System.out.print("Enter username: ");
-        String username = sc.nextLine();
+	private static void displayMainMenu() {
+		System.out.println(
+				"\nSelect Operation: " + "\n 1: Login" + "\n 2: Register as a Student" + "\n 0: Close Application");
+		System.out.println("------------------------------");
+		System.out.print("Your Choice: ");
+	}
 
-        System.out.print("Enter password: ");
-        String password = sc.nextLine();
+	private static void handleLogin() {
+		// Get login details about the person
+		System.out.println("\nLogin as (Roles)\n A: Admin\n P: Professor \n S: Student");
+		System.out.println("------------------------------");
+		System.out.print("Your Choice: ");
 
-        System.out.println("login status: " + loginService.login(role, username, password));
+		String buf = sc.nextLine();
+		String role = sc.nextLine();
 
-        return;
-    }
+		System.out.print("\nEnter username: ");
+		String username = sc.nextLine();
 
-    public static void main(String[] args) {
-        System.out.println("Welcome to the registration portal.");
+		System.out.print("Enter password: ");
+		String password = sc.nextLine();
 
-        displayMainMenu();
-        int operation = sc.nextInt();
-        while(operation != 0){
-            switch (operation){
-                case 1:
-                    handleLogin();
-                    break;
+		System.out.println("\nLogin status: " + loginService.login(role, username, password));
 
-                case 2:
-//                    StudentOperationService.
-                    System.out.println("Create a new student here");
-                    break;
+		return;
+	}
 
+	public static void main(String[] args) {
+		System.out.println("Welcome to the registration portal!");
 
-                default:
-                    System.out.println("Invalid Operation.");
-            }
-            displayMainMenu();
-            operation = sc.nextInt();
-        }
-    }
+		displayMainMenu();
+
+		int operation = sc.nextInt();
+		while (operation != 0) {
+			switch (operation) {
+			case 1:
+				handleLogin();
+				break;
+
+			case 2:
+				// StudentOperationService
+				System.out.println("Create a new student here");
+				break;
+
+			default:
+				System.out.println("Invalid Operation.");
+			}
+			displayMainMenu();
+			operation = sc.nextInt();
+		}
+	}
 }

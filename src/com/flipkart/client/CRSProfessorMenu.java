@@ -31,7 +31,7 @@ public class CRSProfessorMenu {
                 break;
 
             case 2:
-                pos.addGrades();
+                pos.addGrade();
                 break;
 
             case 3:
