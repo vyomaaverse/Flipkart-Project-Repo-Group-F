@@ -1,9 +1,13 @@
 package com.flipkart.bean;
 
+import java.util.List;
+
 public class Student extends User{
     private int studentId;
     private String branch;
     private int batch;
+
+    private List<SemesterRegistration> semesterRegistrations;
 
 
 
@@ -30,6 +34,8 @@ public class Student extends User{
     public void setBatch(int batch) {
         this.batch = batch;
     }
+
+
 
 
 

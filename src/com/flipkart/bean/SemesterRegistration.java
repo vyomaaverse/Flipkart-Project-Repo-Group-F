@@ -1,12 +1,15 @@
 package com.flipkart.bean;
 
 import java.util.Date;
+import java.util.List;
 
 public class SemesterRegistration {
 
     private int studentId;
     private int semester;
     private Date dateOfRegistration;
+
+    private List<RegisteredCourse> registeredCourseList;
 
     public int getStudentId() {
         return studentId;
