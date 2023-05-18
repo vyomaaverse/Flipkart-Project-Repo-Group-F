@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74832edf-626d-474f-b01a-a848854b355d" name="Changes" comment="added ProffessorOperationService">
+      <change afterPath="$PROJECT_DIR$/src/com/flipkart/client/CRSProfessorMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/flipkart/client/CRSStudentMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
