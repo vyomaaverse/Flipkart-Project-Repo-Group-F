@@ -1,5 +1,7 @@
 package com.flipkart.client;
 
+import com.flipkart.bean.Professor;
+import com.flipkart.bean.User;
 import com.flipkart.services.LoginOperationService;
 import com.flipkart.services.StudentOperationService;
 
@@ -26,8 +28,19 @@ public class CRSApplicationClient {
         System.out.print("Enter password: ");
         String password = sc.nextLine();
 
-        System.out.println("login status: " + loginService.login(role, username, password));
+        User user = loginService.login(role, username, password);
+        System.out.println("login status: " + (user!=null?"true":"false"));
 
+        switch (role){
+            case "S":
+                System.out.println("call student client here");
+                break;
+            case "P":
+                CRSProfessorMenu.professorMenu((Professor) user);
+                break;
+            case "A":
+                System.out.println("call admin client here");
+        }
         return;
     }
 
@@ -54,5 +67,7 @@ public class CRSApplicationClient {
             displayMainMenu();
             operation = sc.nextInt();
         }
+
+        System.out.println("Thank you for using our application.");
     }
 }

@@ -5,7 +5,7 @@ import com.flipkart.bean.Professor;
 public class ProfessorOperationService extends Professor{
 
 
-    public void addGrades(){
+    public void addGrade(){
         System.out.println("add grades for students");
     }
 
