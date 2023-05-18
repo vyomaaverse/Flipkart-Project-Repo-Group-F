@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="74832edf-626d-474f-b01a-a848854b355d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/PaymentOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/PaymentOperationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/client/StudentManagementClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/client/StudentManagementClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/AdminOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/AdminOperationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/ProfessorOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/ProfessorOperationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/flipkart/services/StudentOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flipkart/services/StudentOperationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,23 +25,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="14d218d8-381a-4a59-a1f8-fb12407f61ba" />
-        <option name="url" value="https://github.com/vyomaaverse/Flipkart-Project-Repo-Group-F" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="ProjectId" id="2Pxc5sSRTNTunwy3flmJSLkHdoz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
