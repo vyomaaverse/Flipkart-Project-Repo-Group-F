@@ -9,6 +9,7 @@ public class GradeCardBusiness extends GradeCard {
 
     public double calculateCPI(){
         System.out.println("calculate cpi here");
+
         return 10.0;
     }
 }
