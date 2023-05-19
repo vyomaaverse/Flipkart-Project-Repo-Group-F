@@ -1,7 +1,7 @@
 package com.flipkart.client;
 
 import java.util.Scanner;
-import com.flipkart.services.AdminOperationService;
+import com.flipkart.services.AdminServiceService;
 import com.flipkart.bean.*;
 
 public class CRSAdminMenu {
@@ -20,7 +20,7 @@ public class CRSAdminMenu {
 
 
     public static void showCRSAdminMenu(){
-        AdminOperationService admin = new AdminOperationService();
+        AdminServiceService admin = new AdminServiceService();
 
         System.out.println("Welcome Admin!");
         display();
