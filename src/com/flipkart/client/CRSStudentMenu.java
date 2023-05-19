@@ -5,37 +5,53 @@ import com.flipkart.services.StudentOperationService;
 import java.util.Scanner;
 
 public class CRSStudentMenu {
-	static void showCRSStudentMenu() {
 
-		StudentOperationService sos = new StudentOperationService();
-
-		Scanner scanner = new Scanner(System.in);
-
-		System.out.println("\n==========================================================================\n");
+	private static void displayMenu(){
+		System.out.println("\n------------------------------");
 		System.out.println("Student Menu");
+		System.out.println(" 0. Logout");
 		System.out.println(" 1. View Grade Card");
 		System.out.println(" 2. Register");
 		System.out.println(" 3. Change Password");
-		System.out.println("\n==========================================================================\n");
+		System.out.print("Your Choice: ");
+	}
+	public static void showCRSStudentMenu() {
 
-		System.out.println("Enter Option : ");
+		StudentOperationService sos = new StudentOperationService();
+
+		System.out.println("Welcome Student.");
+		Scanner scanner = new Scanner(System.in);
+
+
+		displayMenu();
+
 
 		int optionChosen = scanner.nextInt();
 		scanner.nextLine();
 
-		switch (optionChosen) {
-		case 1:
-			sos.viewGradeCard(3);
-			break;
+		while(optionChosen != 0){
+			switch (optionChosen) {
+				case 1:
+					sos.viewGradeCard(3);
+					break;
 
-		case 2:
-			sos.register("name", "branch", 2023);
-			break;
+				case 2:
+					sos.register("name", "branch", 2023);
+					break;
 
-		case 3:
+				case 3:
 //			sos.changePassword("new");
-			break;
+					break;
+				default:
+					System.out.println("Invalid operation");
+			}
+
+			displayMenu();
+			optionChosen = scanner.nextInt();
+			scanner.nextLine();
 		}
+
+		System.out.println("Thank you student. Logging out");
 
 		scanner.close();
 	}

@@ -10,15 +10,17 @@ public class CRSProfessorMenu {
 	private static ProfessorOperationService professorService = new ProfessorOperationService();
 
 	private static void displayMenu() {
-		System.out.println("Select operation:");
-		System.out.println(" 0. Logout");
-		System.out.println(" 1. View enrolled students in a course");
-		System.out.println(" 2. Add grades of a course");
-		System.out.println(" 3. Update Details");
+        System.out.println("\n------------------------------");
+        System.out.println("Professor Menu:");
+        System.out.println(" 0. Logout");
+        System.out.println(" 1. View enrolled students");
+        System.out.println(" 2. Add grades");
+        System.out.println(" 3. Update Details");
+        System.out.print("Your Choice: ");
 	}
 
 	public static void professorMenu(Professor professor){
-        System.out.println("Hello " + professor.getName() + "!");
+        System.out.println("Welcome Professor " + professor.getName() + "!");
         displayMenu();
         int operation = sc.nextInt();
         while (operation != 0){
@@ -41,7 +43,7 @@ public class CRSProfessorMenu {
             operation = sc.nextInt();
         }
 
-        System.out.println("Bye " + professor.getName());
+        System.out.println("Thank you Professor" + professor.getName() + ". Logging out.");
 //        professorService.delete
     }
 }

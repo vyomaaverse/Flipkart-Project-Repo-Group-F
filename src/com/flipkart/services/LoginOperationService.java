@@ -10,13 +10,15 @@ public class LoginOperationService extends User {
         System.out.println("Verify user credentials");
 
         switch (role){
-            case "A":
+            case "a":
                 return new Admin();
-            case "P":
-                Professor p = new Professor();
+            case "p":
+                User p = new Professor();
                 p.setName(username);
+//                System.out.println("prof -- " + p.getName());
                 return p;
-            case "S":
+//                return new Professor();
+            case "s":
                 return new Student();
             default:
                 return new User();

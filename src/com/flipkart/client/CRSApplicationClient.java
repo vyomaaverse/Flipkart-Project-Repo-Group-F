@@ -16,16 +16,16 @@ public class CRSApplicationClient {
 	private static StudentOperationService studentService = new StudentOperationService();
 
 	private static void displayMainMenu() {
+		System.out.println("\n------------------------------");
 		System.out.println(
-				"\nSelect Operation: " + "\n 1: Login" + "\n 2: Register as a Student" + "\n 0: Close Application");
-		System.out.println("------------------------------");
+				"Select Operation: " + "\n 1: Login" + "\n 2: Register student" + "\n 0: Exit");
 		System.out.print("Your Choice: ");
 	}
 
 	private static void handleLogin() {
 		// Get login details about the person
-		System.out.println("\nLogin as (Roles)\n A: Admin\n P: Professor \n S: Student");
-		System.out.println("------------------------------");
+		System.out.println("\n------------------------------");
+		System.out.println("Login as (Roles)\n a: Admin\n p: Professor \n s: Student");
 		System.out.print("Your Choice: ");
 
 		String buf = sc.nextLine();
@@ -41,8 +41,21 @@ public class CRSApplicationClient {
 		System.out.println("\nLogin status: " + (user != null ? "true" : "false"));
 
 		switch (role) {
-		case "P":
-			CRSProfessorMenu.professorMenu((Professor) user);
+			case "p":
+//				Professor p = (Professor) user;
+//				System.out.println(user.getName());
+				CRSProfessorMenu.professorMenu((Professor) user );
+				break;
+			case "a":
+//				System.out.println("Admin menu");
+				CRSAdminMenu.showCRSAdminMenu();
+				break;
+			case "s":
+//				System.out.println("Student menu");
+				CRSStudentMenu.showCRSStudentMenu();
+				break;
+			default:
+				System.out.println("Invalid role");
 		}
 		return;
 	}
@@ -92,3 +105,11 @@ public class CRSApplicationClient {
 		System.out.println("Thank You!");
 	}
 }
+
+
+/*
+
+drop role in
+hello -> welcome "..."
+
+ */
