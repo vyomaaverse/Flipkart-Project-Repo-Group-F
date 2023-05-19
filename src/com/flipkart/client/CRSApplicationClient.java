@@ -63,23 +63,39 @@ public class CRSApplicationClient {
 		return;
 	}
 
-//	private static void handleStudentRegister() {
-//		String buf = sc.nextLine();
-//
-//		System.out.print("\nEnter you name: ");
-//		String name = sc.nextLine();
-//
-//		System.out.print("Enter your branch: ");
-//		String branch = sc.nextLine();
-//
-//		System.out.print("Enter your batch: ");
-//		int batch = sc.nextInt();
-//
-//		System.out.println("");
-//
+	private static void handleStudentRegister() {
+		String buf = sc.nextLine();
+
+		System.out.print("\nEnter you name: ");
+		String name = sc.nextLine();
+
+		System.out.print("Enter your branch: ");
+		String branch = sc.nextLine();
+
+		System.out.print("Enter your batch: ");
+		int batch = sc.nextInt();
+
+		System.out.println("");
+
+		loginService.registerStudent(name, branch, batch);
 //		boolean registrationStatus = studentService.register(name, branch, batch);
 //		System.out.println("Registration status: " + (registrationStatus ? "Pending for Approval" : "Failed"));
-//	}
+	}
+
+	private static void handleUpdatePassword(){
+		String buf = sc.nextLine();
+
+		System.out.print("Enter your email: ");
+		String email = sc.nextLine();
+
+		System.out.print("Enter old password: ");
+		String oldPass = sc.nextLine();
+
+		System.out.print("Enter new password: ");
+		String newPass = sc.nextLine();
+
+		loginService.updatePassword(email, oldPass, newPass);
+	}
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to the registration portal!");
@@ -94,15 +110,16 @@ public class CRSApplicationClient {
 					break;
 
 				case 2:
-					loginService.registerStudent();
+					handleStudentRegister();
 					break;
 
 				case 3:
-					loginService.updatePassword("role", "userId", "oldPass", "newPass");
+					handleUpdatePassword();
+					break;
 
 
-			default:
-				System.out.println("Invalid Operation.");
+				default:
+					System.out.println("Invalid Operation.");
 			}
 			displayMainMenu();
 			operation = sc.nextInt();
