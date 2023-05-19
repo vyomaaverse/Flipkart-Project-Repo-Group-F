@@ -4,6 +4,7 @@ import com.flipkart.bean.User;
 import com.flipkart.bean.Professor;
 import com.flipkart.services.LoginOperationService;
 //import com.flipkart.services.StudentOperationService;
+import com.flipkart.services.StudentOperationService;
 
 import java.util.Scanner;
 
@@ -12,17 +13,22 @@ public class CRSApplicationClient {
 
 	private static LoginOperationService loginService = new LoginOperationService();
 
+	private static StudentOperationService studentService = new StudentOperationService();
+
 	private static void displayMainMenu() {
-		System.out.println(
-				"\nSelect Operation: " + "\n 1: Login" + "\n 2: Register as a Student" + "\n 0: Close Application");
-		System.out.println("------------------------------");
+		System.out.println("\n------------------------------");
+		System.out.println("Welcome to CRS Application");
+		System.out.println(" 0. Exit");
+		System.out.println(" 1. Login");
+		System.out.println(" 2. Registration of the student");
+		System.out.println(" 3. Update Password");
 		System.out.print("Your Choice: ");
 	}
 
 	private static void handleLogin() {
 		// Get login details about the person
-		System.out.println("\nLogin as (Roles)\n A: Admin\n P: Professor \n S: Student");
-		System.out.println("------------------------------");
+		System.out.println("\n------------------------------");
+		System.out.println("Login as (Roles)\n a: Admin\n p: Professor \n s: Student");
 		System.out.print("Your Choice: ");
 
 		String buf = sc.nextLine();
@@ -35,14 +41,45 @@ public class CRSApplicationClient {
 		String password = sc.nextLine();
 
 		User user = loginService.login(role, username, password);
-		System.out.println("\nLogin status: " + (user!=null?"true":"false"));
+		System.out.println("\nLogin status: " + (user != null ? "true" : "false"));
 
 		switch (role) {
-			case "P":
-				CRSProfessorMenu.professorMenu((Professor) user);
+			case "p":
+//				Professor p = (Professor) user;
+//				System.out.println(user.getName());
+				CRSProfessorMenu.professorMenu((Professor) user );
+				break;
+			case "a":
+//				System.out.println("Admin menu");
+				CRSAdminMenu.showCRSAdminMenu();
+				break;
+			case "s":
+//				System.out.println("Student menu");
+				CRSStudentMenu.showCRSStudentMenu();
+				break;
+			default:
+				System.out.println("Invalid role");
 		}
 		return;
 	}
+
+//	private static void handleStudentRegister() {
+//		String buf = sc.nextLine();
+//
+//		System.out.print("\nEnter you name: ");
+//		String name = sc.nextLine();
+//
+//		System.out.print("Enter your branch: ");
+//		String branch = sc.nextLine();
+//
+//		System.out.print("Enter your batch: ");
+//		int batch = sc.nextInt();
+//
+//		System.out.println("");
+//
+//		boolean registrationStatus = studentService.register(name, branch, batch);
+//		System.out.println("Registration status: " + (registrationStatus ? "Pending for Approval" : "Failed"));
+//	}
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to the registration portal!");
@@ -52,14 +89,17 @@ public class CRSApplicationClient {
 		int operation = sc.nextInt();
 		while (operation != 0) {
 			switch (operation) {
-			case 1:
-				handleLogin();
-				break;
+				case 1:
+					handleLogin();
+					break;
 
-			case 2:
-				// StudentOperationService
-				System.out.println("Create a new student here");
-				break;
+				case 2:
+					loginService.registerStudent();
+					break;
+
+				case 3:
+					loginService.updatePassword("role", "userId", "oldPass", "newPass");
+
 
 			default:
 				System.out.println("Invalid Operation.");
@@ -67,5 +107,15 @@ public class CRSApplicationClient {
 			displayMainMenu();
 			operation = sc.nextInt();
 		}
+
+		System.out.println("Thank You!");
 	}
 }
+
+
+/*
+
+drop role in
+hello -> welcome "..."
+
+ */
