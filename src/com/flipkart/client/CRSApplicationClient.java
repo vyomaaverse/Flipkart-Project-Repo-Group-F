@@ -4,6 +4,7 @@ import com.flipkart.bean.User;
 import com.flipkart.bean.Professor;
 import com.flipkart.services.LoginOperationService;
 //import com.flipkart.services.StudentOperationService;
+import com.flipkart.services.StudentOperationService;
 
 import java.util.Scanner;
 
@@ -11,6 +12,8 @@ public class CRSApplicationClient {
 	private static Scanner sc = new Scanner(System.in);
 
 	private static LoginOperationService loginService = new LoginOperationService();
+
+	private static StudentOperationService studentService = new StudentOperationService();
 
 	private static void displayMainMenu() {
 		System.out.println(
@@ -35,13 +38,31 @@ public class CRSApplicationClient {
 		String password = sc.nextLine();
 
 		User user = loginService.login(role, username, password);
-		System.out.println("\nLogin status: " + (user!=null?"true":"false"));
+		System.out.println("\nLogin status: " + (user != null ? "true" : "false"));
 
 		switch (role) {
-			case "P":
-				CRSProfessorMenu.professorMenu((Professor) user);
+		case "P":
+			CRSProfessorMenu.professorMenu((Professor) user);
 		}
 		return;
+	}
+
+	private static void handleStudentRegister() {
+		String buf = sc.nextLine();
+
+		System.out.print("\nEnter you name: ");
+		String name = sc.nextLine();
+
+		System.out.print("Enter your branch: ");
+		String branch = sc.nextLine();
+
+		System.out.print("Enter your batch: ");
+		int batch = sc.nextInt();
+
+		System.out.println("");
+
+		boolean registrationStatus = studentService.register(name, branch, batch);
+		System.out.println("Registration status: " + (registrationStatus ? "Pending for Approval" : "Failed"));
 	}
 
 	public static void main(String[] args) {
@@ -58,7 +79,7 @@ public class CRSApplicationClient {
 
 			case 2:
 				// StudentOperationService
-				System.out.println("Create a new student here");
+				handleStudentRegister();
 				break;
 
 			default:
@@ -67,5 +88,7 @@ public class CRSApplicationClient {
 			displayMainMenu();
 			operation = sc.nextInt();
 		}
+
+		System.out.println("Thank You!");
 	}
 }
