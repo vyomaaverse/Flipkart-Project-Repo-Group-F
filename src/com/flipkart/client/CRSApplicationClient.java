@@ -2,7 +2,7 @@ package com.flipkart.client;
 
 import com.flipkart.bean.User;
 import com.flipkart.bean.Professor;
-import com.flipkart.services.LoginServiceService;
+import com.flipkart.services.LoginOperationService;
 //import com.flipkart.services.StudentOperationService;
 import com.flipkart.services.StudentOperationService;
 
@@ -11,14 +11,17 @@ import java.util.Scanner;
 public class CRSApplicationClient {
 	private static Scanner sc = new Scanner(System.in);
 
-	private static LoginServiceService loginService = new LoginServiceService();
+	private static LoginOperationService loginService = new LoginOperationService();
 
 	private static StudentOperationService studentService = new StudentOperationService();
 
 	private static void displayMainMenu() {
 		System.out.println("\n------------------------------");
-		System.out.println(
-				"Select Operation: " + "\n 1: Login" + "\n 2: Register student" + "\n 0: Exit");
+		System.out.println("Welcome to CRS Application");
+		System.out.println(" 0. Exit");
+		System.out.println(" 1. Login");
+		System.out.println(" 2. Registration of the student");
+		System.out.println(" 3. Update Password");
 		System.out.print("Your Choice: ");
 	}
 
@@ -60,23 +63,23 @@ public class CRSApplicationClient {
 		return;
 	}
 
-	private static void handleStudentRegister() {
-		String buf = sc.nextLine();
-
-		System.out.print("\nEnter you name: ");
-		String name = sc.nextLine();
-
-		System.out.print("Enter your branch: ");
-		String branch = sc.nextLine();
-
-		System.out.print("Enter your batch: ");
-		int batch = sc.nextInt();
-
-		System.out.println("");
-
-		boolean registrationStatus = studentService.register(name, branch, batch);
-		System.out.println("Registration status: " + (registrationStatus ? "Pending for Approval" : "Failed"));
-	}
+//	private static void handleStudentRegister() {
+//		String buf = sc.nextLine();
+//
+//		System.out.print("\nEnter you name: ");
+//		String name = sc.nextLine();
+//
+//		System.out.print("Enter your branch: ");
+//		String branch = sc.nextLine();
+//
+//		System.out.print("Enter your batch: ");
+//		int batch = sc.nextInt();
+//
+//		System.out.println("");
+//
+//		boolean registrationStatus = studentService.register(name, branch, batch);
+//		System.out.println("Registration status: " + (registrationStatus ? "Pending for Approval" : "Failed"));
+//	}
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to the registration portal!");
@@ -86,14 +89,17 @@ public class CRSApplicationClient {
 		int operation = sc.nextInt();
 		while (operation != 0) {
 			switch (operation) {
-			case 1:
-				handleLogin();
-				break;
+				case 1:
+					handleLogin();
+					break;
 
-			case 2:
-				// StudentOperationService
-				handleStudentRegister();
-				break;
+				case 2:
+					loginService.registerStudent();
+					break;
+
+				case 3:
+					loginService.updatePassword("role", "userId", "oldPass", "newPass");
+
 
 			default:
 				System.out.println("Invalid Operation.");

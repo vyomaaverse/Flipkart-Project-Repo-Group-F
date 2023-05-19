@@ -53,6 +53,6 @@ public class CRSStudentMenu {
 
 		System.out.println("Thank you student. Logging out");
 
-		scanner.close();
+//		scanner.close();
 	}
 }

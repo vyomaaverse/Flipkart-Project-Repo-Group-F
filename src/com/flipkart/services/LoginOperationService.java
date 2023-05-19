@@ -5,7 +5,7 @@ import com.flipkart.bean.Professor;
 import com.flipkart.bean.Student;
 import com.flipkart.bean.User;
 
-public class LoginServiceService extends User implements LoginServiceInterface {
+public class LoginOperationService extends User implements LoginServiceInterface {
     public User login(String role, String username, String password){
         System.out.println("Verify user credentials");
 
@@ -25,8 +25,15 @@ public class LoginServiceService extends User implements LoginServiceInterface {
 //        return new User();
     }
 
-    public boolean changePassword(String role, String userId, String oldPass, String newPass){
+    public boolean updatePassword(String role, String userId, String oldPass, String newPass){
         System.out.println("update user's password here");
+
+        return true;
+    }
+
+    @Override
+    public boolean registerStudent() {
+        System.out.println("Code to register a student");
 
         return true;
     }
