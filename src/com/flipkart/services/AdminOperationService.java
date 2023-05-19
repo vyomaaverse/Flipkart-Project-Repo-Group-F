@@ -4,7 +4,7 @@ import com.flipkart.bean.Admin;
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Professor;
 
-public class AdminOperationService extends Admin{
+public class AdminOperationService extends Admin implements AdminOperationInterface{
 	public boolean addProfessor(Professor newProfessor) {
 		System.out.println("Impl addProfessor of AdminBusiness");
 

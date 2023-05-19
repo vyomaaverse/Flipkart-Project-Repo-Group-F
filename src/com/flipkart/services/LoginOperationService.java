@@ -5,7 +5,7 @@ import com.flipkart.bean.Professor;
 import com.flipkart.bean.Student;
 import com.flipkart.bean.User;
 
-public class LoginOperationService extends User {
+public class LoginOperationService extends User implements LoginOperationInterface{
     public User login(String role, String username, String password){
         System.out.println("Verify user credentials");
 
@@ -15,13 +15,11 @@ public class LoginOperationService extends User {
             case "p":
                 User p = new Professor();
                 p.setName(username);
-//                System.out.println("prof -- " + p.getName());
                 return p;
-//                return new Professor();
             case "s":
                 return new Student();
             default:
-                return new User();
+                return null;
         }
 //        System.out.println(role);
 //        return new User();
