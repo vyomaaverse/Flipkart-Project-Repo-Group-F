@@ -2,7 +2,7 @@ package com.flipkart.services;
 
 import com.flipkart.bean.Student;
 
-public class StudentOperationService extends Student {
+public class StudentOperationService extends Student implements StudentServiceInterface{
 
 	public boolean addCourse(int semester, String courseCode) {
 		System.out.println("Registering student for semester " + semester + " of course " + courseCode);

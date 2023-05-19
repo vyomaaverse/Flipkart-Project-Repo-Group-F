@@ -2,7 +2,7 @@ package com.flipkart.services;
 
 import com.flipkart.bean.Professor;
 
-public class ProfessorOperationService extends Professor {
+public class ProfessorOperationService extends Professor implements ProfessorServiceInterface{
 
 	public void addGrade(int studentId, String courseCode, int semester) {
 		System.out.println(
