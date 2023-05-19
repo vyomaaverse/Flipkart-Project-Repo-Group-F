@@ -2,7 +2,7 @@ package com.flipkart.client;
 
 import com.flipkart.bean.User;
 import com.flipkart.bean.Professor;
-import com.flipkart.services.LoginOperationService;
+import com.flipkart.services.LoginServiceService;
 //import com.flipkart.services.StudentOperationService;
 import com.flipkart.services.StudentOperationService;
 
@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class CRSApplicationClient {
 	private static Scanner sc = new Scanner(System.in);
 
-	private static LoginOperationService loginService = new LoginOperationService();
+	private static LoginServiceService loginService = new LoginServiceService();
 
 	private static StudentOperationService studentService = new StudentOperationService();
 

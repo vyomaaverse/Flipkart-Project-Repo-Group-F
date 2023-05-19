@@ -3,7 +3,7 @@ package com.flipkart.services;
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Professor;
 
-public interface AdminOperationInterface {
+public interface AdminServiceInterface {
     public boolean addProfessor(Professor newProfessor);
 
     public boolean assignCourse(int professorId, String courseCode);

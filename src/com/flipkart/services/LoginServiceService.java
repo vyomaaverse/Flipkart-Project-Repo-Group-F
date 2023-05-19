@@ -5,7 +5,7 @@ import com.flipkart.bean.Professor;
 import com.flipkart.bean.Student;
 import com.flipkart.bean.User;
 
-public class LoginOperationService extends User implements LoginOperationInterface{
+public class LoginServiceService extends User implements LoginServiceInterface {
     public User login(String role, String username, String password){
         System.out.println("Verify user credentials");
 
