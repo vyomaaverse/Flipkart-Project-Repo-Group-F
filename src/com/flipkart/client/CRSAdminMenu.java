@@ -41,9 +41,15 @@ public class CRSAdminMenu {
                 case 3:
                     System.out.println(admin.approveStudent(10001));
                     break;
-                case 4:
-                    System.out.println(admin.addCourse(new Course()));
+                case 4: {
+                    Course newCourse = new Course();
+                    newCourse.setCourseCode("1234");
+                    newCourse.setName("Dummy");
+                    newCourse.setInstructor("Bishal");
+                    newCourse.setOffered(true);
+                    System.out.println(admin.addCourse(newCourse));
                     break;
+                }
                 case 5:
                     System.out.println(admin.removeCourse("Course Code"));
                     break;

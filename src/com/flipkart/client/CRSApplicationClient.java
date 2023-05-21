@@ -47,7 +47,7 @@ public class CRSApplicationClient {
 			case "p":
 //				Professor p = (Professor) user;
 //				System.out.println(user.getName());
-				CRSProfessorMenu.professorMenu((Professor) user );
+//				CRSProfessorMenu.professorMenu((Professor) user );
 				break;
 			case "a":
 //				System.out.println("Admin menu");
