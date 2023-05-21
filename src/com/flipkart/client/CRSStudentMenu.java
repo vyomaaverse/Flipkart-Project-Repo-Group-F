@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class CRSStudentMenu {
 
-	private static void displayMenu(){
+	private static void displayMenu() {
 		System.out.println("\n------------------------------");
 		System.out.println("Student Menu");
 		System.out.println(" 0. Logout");
@@ -15,6 +15,7 @@ public class CRSStudentMenu {
 		System.out.println(" 3. Change Password");
 		System.out.print("Your Choice: ");
 	}
+
 	public static void showCRSStudentMenu() {
 
 		StudentOperationService sos = new StudentOperationService();
@@ -22,28 +23,26 @@ public class CRSStudentMenu {
 		System.out.println("Welcome Student.");
 		Scanner scanner = new Scanner(System.in);
 
-
 		displayMenu();
-
 
 		int optionChosen = scanner.nextInt();
 		scanner.nextLine();
 
-		while(optionChosen != 0){
+		while (optionChosen != 0) {
 			switch (optionChosen) {
-				case 1:
-					sos.viewGradeCard(3);
-					break;
+			case 1:
+				sos.viewGradeCard(3);
+				break;
 
-				case 2:
-					sos.register("name", "branch", 2023);
-					break;
+			case 2:
+				sos.register("name", "branch", 2023);
+				break;
 
-				case 3:
+			case 3:
 //			sos.changePassword("new");
-					break;
-				default:
-					System.out.println("Invalid operation");
+				break;
+			default:
+				System.out.println("Invalid operation");
 			}
 
 			displayMenu();
