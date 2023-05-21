@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class DBInfo {
     private static String database = "CRSDatabase";
-    private Connection conn = null;
+    private static Connection conn = null;
 
-    public Connection getConn(){
+    public static Connection getConn(){
         if (conn != null){
             return conn;
         }
