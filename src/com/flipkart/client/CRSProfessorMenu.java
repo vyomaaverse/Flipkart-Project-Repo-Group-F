@@ -15,7 +15,6 @@ public class CRSProfessorMenu {
         System.out.println(" 0. Logout");
         System.out.println(" 1. View enrolled students");
         System.out.println(" 2. Add grades");
-        System.out.println(" 3. Update Details");
         System.out.print("Your Choice: ");
 	}
 
@@ -31,9 +30,7 @@ public class CRSProfessorMenu {
                 case 2:
                     professorService.addGrade(1, "courseCode", 1);
                     break;
-                case 3:
-                    professorService.updateDetails();
-                    break;
+
                 default:
                     System.out.println("Invalid operation");
             }
