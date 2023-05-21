@@ -1,21 +1,3 @@
-//package com.flipkart.services;
-//
-//import com.flipkart.bean.Professor;
-//
-//public class ProfessorOperationService extends Professor implements ProfessorServiceInterface{
-//
-//	public void addGrade(int studentId, String courseCode, String grade) ;{
-//		System.out.println(
-//				"Adding grade for student " + studentId + " of semester " + semester + " for course " + courseCode);
-//	}
-//
-//	public List<Student> viewEnrolledStudents(int profID) {
-//		System.out.println("Viewing enrolled students of course " + courseCode);
-//	}
-//
-//
-//
-//}
 package com.flipkart.service;
 
 		import com.flipkart.bean.Course;
@@ -47,7 +29,7 @@ public class ProfessorOperation implements ProfessorServiceInterface{
 
 
 	@Override
-	public List<Student> viewStudent(int courseID, String profID) throws ProfNotFoundException, StudentNotFoundException{
+	public List<Student> viewEnrolledStudents(String courseCode, int profID) throws ProfNotFoundException, StudentNotFoundException{
 		List<Student> enrolledStudents = new ArrayList<Student>();
 
 		try {
@@ -60,7 +42,7 @@ public class ProfessorOperation implements ProfessorServiceInterface{
 	}
 
 	@Override
-	public void assignGrade( String studentID, int courseID, GradeConstant grade) throws GradeNotAssignedException, StudentNotFoundException {
+	public void assignGrade( int studentID, String courseCode, String grade) {
 		try{
 			professorDaoOperation.assignGrade(studentID,courseID,grade);
 		}catch (Exception e){
