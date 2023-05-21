@@ -5,7 +5,7 @@ import com.flipkart.bean.User;
 public interface LoginServiceInterface {
     public User login(String role, String username, String password);
 
-    public boolean registerStudent();
+    public boolean registerStudent(String name, String branch, int batch);
 
-    public boolean updatePassword(String role, String userId, String oldPass, String newPass);
+    public boolean updatePassword(String email, String oldPass, String newPass);
 }

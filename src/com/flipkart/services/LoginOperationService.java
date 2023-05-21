@@ -25,15 +25,15 @@ public class LoginOperationService extends User implements LoginServiceInterface
 //        return new User();
     }
 
-    public boolean updatePassword(String role, String userId, String oldPass, String newPass){
+    public boolean updatePassword(String email, String oldPass, String newPass){
         System.out.println("update user's password here");
 
         return true;
     }
 
     @Override
-    public boolean registerStudent() {
-        System.out.println("Code to register a student");
+    public boolean registerStudent(String name, String branch, int batch) {
+        System.out.println("Register " + name + " of branch " + branch + " in batch " + batch);
 
         return true;
     }
