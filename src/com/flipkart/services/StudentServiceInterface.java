@@ -7,7 +7,7 @@ public interface StudentServiceInterface {
 
     public void viewGradeCard(int semester) ;
 
-    public boolean updateDetails() ;
+    public boolean updateDetails(int id, String name, String branch, int batch, String email) ;
 
     public boolean register(String studentName, String studentBranch, int batch);
 }

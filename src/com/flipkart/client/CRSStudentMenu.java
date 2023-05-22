@@ -13,6 +13,7 @@ public class CRSStudentMenu {
 		System.out.println(" 1. View Grade Card");
 		System.out.println(" 2. Register");
 		System.out.println(" 3. Change Password");
+		System.out.println(" 4. Update Details");
 		System.out.print("Your Choice: ");
 	}
 
@@ -38,8 +39,10 @@ public class CRSStudentMenu {
 				break;
 
 			case 3:
-//			sos.changePassword("new");
+			sos.changePassword("new");
 				break;
+
+
 			default:
 				System.out.println("Invalid operation");
 			}
