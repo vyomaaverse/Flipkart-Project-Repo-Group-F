@@ -1,7 +1,9 @@
 package com.flipkart.client;
 
 import com.flipkart.bean.User;
+import com.flipkart.bean.Admin;
 import com.flipkart.bean.Professor;
+import com.flipkart.bean.Student;
 import com.flipkart.services.LoginOperationService;
 //import com.flipkart.services.StudentOperationService;
 import com.flipkart.services.StudentOperationService;
@@ -34,31 +36,52 @@ public class CRSApplicationClient {
 		String buf = sc.nextLine();
 		String role = sc.nextLine();
 
-		System.out.print("\nEnter username: ");
+		System.out.print("\nEnter user id: ");
 		String username = sc.nextLine();
 
 		System.out.print("Enter password: ");
 		String password = sc.nextLine();
 
-		User user = loginService.login(role, username, password);
-		System.out.println("\nLogin status: " + (user != null ? "true" : "false"));
+		String roleFull = "";
+		switch (role) {
+		case "a":
+			roleFull = "admin";
+			break;
+		case "p":
+			roleFull = "professor";
+			break;
+		case "s":
+			roleFull = "student";
+			break;
+		default:
+			break;
+		}
+
+		User user = loginService.login(roleFull, username, password);
+
+		if (user == null) {
+			System.out.println("Invalid user id or password!");
+			return;
+		}
+
+		System.out.println("\nWelcome " + roleFull + " - " + user.getName());
 
 		switch (role) {
-			case "p":
+		case "p":
 //				Professor p = (Professor) user;
 //				System.out.println(user.getName());
-				CRSProfessorMenu.professorMenu((Professor) user );
-				break;
-			case "a":
+			CRSProfessorMenu.professorMenu((Professor) user);
+			break;
+		case "a":
 //				System.out.println("Admin menu");
-				CRSAdminMenu.showCRSAdminMenu();
-				break;
-			case "s":
+			CRSAdminMenu.showCRSAdminMenu((Admin) user);
+			break;
+		case "s":
 //				System.out.println("Student menu");
-				CRSStudentMenu.showCRSStudentMenu();
-				break;
-			default:
-				System.out.println("Invalid role");
+			CRSStudentMenu.showCRSStudentMenu();
+			break;
+		default:
+			System.out.println("Invalid role");
 		}
 		return;
 	}
@@ -75,18 +98,27 @@ public class CRSApplicationClient {
 		System.out.print("Enter your batch: ");
 		int batch = sc.nextInt();
 
+		sc.nextLine();
+
+		System.out.print("Enter your email: ");
+		String email = sc.nextLine();
+
+		System.out.print("Set your password: ");
+		String password = sc.nextLine();
+
 		System.out.println("");
 
-		loginService.registerStudent(name, branch, batch);
+		User newStudent = loginService.registerStudent(name, branch, batch, email, password);
 //		boolean registrationStatus = studentService.register(name, branch, batch);
 //		System.out.println("Registration status: " + (registrationStatus ? "Pending for Approval" : "Failed"));
 	}
 
-	private static void handleUpdatePassword(){
+	private static void handleUpdatePassword() {
 		String buf = sc.nextLine();
 
-		System.out.print("Enter your email: ");
-		String email = sc.nextLine();
+		System.out.print("Enter your id: ");
+		int userId = sc.nextInt();
+		sc.nextLine();
 
 		System.out.print("Enter old password: ");
 		String oldPass = sc.nextLine();
@@ -94,7 +126,12 @@ public class CRSApplicationClient {
 		System.out.print("Enter new password: ");
 		String newPass = sc.nextLine();
 
-		loginService.updatePassword(email, oldPass, newPass);
+		boolean updateStatus = loginService.updatePassword(userId, oldPass, newPass);
+		if (updateStatus) {
+			System.out.println("Password updated succesfully!");
+		} else {
+			System.out.println("Failed to update. Please check your id and password!");
+		}
 	}
 
 	public static void main(String[] args) {
@@ -105,21 +142,20 @@ public class CRSApplicationClient {
 		int operation = sc.nextInt();
 		while (operation != 0) {
 			switch (operation) {
-				case 1:
-					handleLogin();
-					break;
+			case 1:
+				handleLogin();
+				break;
 
-				case 2:
-					handleStudentRegister();
-					break;
+			case 2:
+				handleStudentRegister();
+				break;
 
-				case 3:
-					handleUpdatePassword();
-					break;
+			case 3:
+				handleUpdatePassword();
+				break;
 
-
-				default:
-					System.out.println("Invalid Operation.");
+			default:
+				System.out.println("Invalid Operation.");
 			}
 			displayMainMenu();
 			operation = sc.nextInt();
@@ -128,11 +164,3 @@ public class CRSApplicationClient {
 		System.out.println("Thank You!");
 	}
 }
-
-
-/*
-
-drop role in
-hello -> welcome "..."
-
- */
