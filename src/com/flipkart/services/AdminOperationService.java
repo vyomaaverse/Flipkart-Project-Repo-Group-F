@@ -3,6 +3,7 @@ package com.flipkart.services;
 import com.flipkart.bean.Admin;
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Professor;
+import com.flipkart.dao.AdminDAOImpl;
 
 public class AdminOperationService extends Admin implements AdminServiceInterface {
 	public boolean addProfessor(Professor newProfessor) {
@@ -30,7 +31,7 @@ public class AdminOperationService extends Admin implements AdminServiceInterfac
 	}
 
 	public boolean addCourse(Course newCourse) {
-		System.out.println("Adding course");
+		AdminDAOImpl.addCourse(newCourse);
 
 		return true;
 	}
