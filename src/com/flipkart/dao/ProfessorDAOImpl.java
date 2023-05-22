@@ -51,7 +51,7 @@ public class ProfessorDaoImpl implements ProfessorDaoInterface{
     @Override
     public List<Student> viewEnrolledStudents(String courseID, int profID) throws ProfNotFoundException, StudentNotFoundException{
 
-        Connection connection = DBInfo.getConn();
+        Connection connection = DBInfo.getConnection();
 
         List<Student> studentList = new ArrayList<Student>();
 
@@ -102,7 +102,7 @@ public class ProfessorDaoImpl implements ProfessorDaoInterface{
      */
     @Override
     public void addGrade(String studentID, int courseID, GradeConstant grade) throws StudentNotFoundException, GradeNotAssignedException{
-        Connection connection = DBInfo.getConn();
+        Connection connection = DBInfo.getConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SQLQueriesConstant.ADD_GRADE);
 

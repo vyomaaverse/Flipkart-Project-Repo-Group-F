@@ -25,7 +25,7 @@ public class AdminDAOImpl{
     private static PreparedStatement statement = null;
     public static void addCourse(Course course)  {
         statement = null;
-        Connection conn = DBInfo.getConn();
+        Connection conn = DBInfo.getConnection();
         try {
             String sql = SQLQueriesConstant.ADD_COURSE_QUERY;
             statement = conn.prepareStatement(sql);
@@ -50,7 +50,7 @@ public class AdminDAOImpl{
 
 //    public void removeCourse(int courseID) {
 //        statement = null;
-//        Connection conn = DBInfo.getConn();
+//        Connection conn = DBInfo.getConnection();
 //        try{
 //            String sql = SQLQueriesConstant.DELETE_COURSE_QUERY;
 //            statement = conn.prepareStatement(sql);
@@ -72,7 +72,7 @@ public class AdminDAOImpl{
 //
 //    public void addUser(User user) {
 //        statement = null;
-//        Connection conn = DBInfo.getConn();
+//        Connection conn = DBInfo.getConnection();
 //        try {
 //
 //            String sql = SQLQueriesConstant.ADD_USER_QUERY;
@@ -112,7 +112,7 @@ public class AdminDAOImpl{
 //        }
 //
 //        statement = null;
-//        Connection conn = DBInfo.getConn();
+//        Connection conn = DBInfo.getConnection();
 //        try {
 //
 //            String sql = SQLQueriesConstant.ADD_PROFESSOR_QUERY;
@@ -139,7 +139,7 @@ public class AdminDAOImpl{
 //
 //    public void approveStudent(String studentId) {
 //        statement = null;
-//        Connection conn = DBInfo.getConn();
+//        Connection conn = DBInfo.getConnection();
 //
 //        try {
 //            String sql = SQLQueriesConstant.APPROVE_STUDENT_QUERY;
@@ -156,7 +156,7 @@ public class AdminDAOImpl{
 //
 //    public void generateReportCard(String studentID) {
 //        statement = null;
-//        Connection conn = DBInfo.getConn();
+//        Connection conn = DBInfo.getConnection();
 //        try {
 //            String sql = SQLQueriesConstant.GET_STUDENT_GRADES;
 //            statement = conn.prepareStatement(sql);
@@ -202,7 +202,7 @@ public class AdminDAOImpl{
 //
 //    public void assignCourse(String profID, int courseID) {
 //        statement = null;
-//        Connection conn = DBInfo.getConn();
+//        Connection conn = DBInfo.getConnection();
 //        try {
 //
 //            String sql = SQLQueriesConstant.ASSIGN_COURSE_QUERY;

@@ -20,7 +20,6 @@ public class CRSStudentMenu {
 
 		StudentOperationService sos = new StudentOperationService();
 
-		System.out.println("Welcome Student.");
 		Scanner scanner = new Scanner(System.in);
 
 		displayMenu();
